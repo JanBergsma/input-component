@@ -6,36 +6,47 @@
     </div>
   </div>
 </template>
-<script lang="ts" setup>
-export interface Props {}
 
-const props = withDefaults(defineProps<Props>(), {})
+<script lang="ts" setup>
+import { computed } from 'vue'
+export interface Props {
+  error?: boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  error: false
+})
+
+const color = computed(() => `var(${props.error ? '--input-color-error' : '--input-color-label'})`)
+const focusColor = computed(
+  () => `var(${props.error ? '--input-color-error' : '--input-color-focus'})`
+)
 </script>
 
 <style scoped>
 .container {
-  color: #333333;
+  color: v-bind(color);
   font-family: 'Noto Sans', sans-serif;
   display: grid;
   gap: 0.4rem;
 }
 
 input {
-  color: #828282;
+  color: var(--input-text-color);
   width: 200px;
   border-radius: 8px;
   border: none;
-  outline: 1px solid #828282;
+  outline: 1px solid v-bind(color);
   padding: 1rem 1rem;
 }
 
 input:hover {
-  background: #f9f9f9;
+  background: var(--input-background-hover);
 }
 
 input:focus,
 .container:focus-within {
-  color: #2962ff;
-  outline-color: #2962ff;
+  color: v-bind(focusColor);
+  outline-color: v-bind(focusColor);
 }
 </style>

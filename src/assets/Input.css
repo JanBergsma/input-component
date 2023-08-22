@@ -1,1 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;700&display=swap');
+
+:root {
+  --input-background-hover: #f9f9f9;
+  --input-color: #828282;
+  --input-color-error: #d32f2f;
+  --input-color-focus: #2962ff;
+  --input-color-label: #333333;
+}

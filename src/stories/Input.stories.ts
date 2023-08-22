@@ -20,4 +20,8 @@ type Story = StoryObj<typeof meta>
  * See https://storybook.js.org/docs/vue/api/csf
  * to learn how to use render functions.
  */
-export const Default: Story = {} as Story
+export const Default: Story = {}
+
+export const Error: Story = {
+  args: { error: true }
+}
