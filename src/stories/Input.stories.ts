@@ -25,3 +25,26 @@ export const Default: Story = {}
 export const Error: Story = {
   args: { error: true }
 }
+
+export const Disabled: Story = {
+  args: { disabled: true }
+}
+export const Text: Story = {
+  args: { text: 'Some interesting text.' }
+}
+
+export const ErrorText: Story = {
+  args: { error: true, text: 'Some interesting text.' }
+}
+
+export const StartIcon: Story = {
+  args: { startIcon: 'local_grocery_store' }
+}
+
+export const EndIcon: Story = {
+  args: { endIcon: 'local_grocery_store' }
+}
+
+export const Value: Story = {
+  args: { value: 'Example Text' }
+}
