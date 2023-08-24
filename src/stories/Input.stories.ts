@@ -48,3 +48,19 @@ export const EndIcon: Story = {
 export const Value: Story = {
   args: { value: 'Example Text' }
 }
+
+export const InputSizeSm: Story = {
+  args: { inputsize: 'sm' }
+}
+
+export const InputSizeMd: Story = {
+  args: { inputsize: 'md' }
+}
+
+export const FullWidth: Story = {
+  args: { fullwidth: true }
+}
+
+export const Multiline: Story = {
+  args: { multiline: true, rows: 4 }
+}
