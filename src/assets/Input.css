@@ -8,8 +8,9 @@
   --input-color-error: #d32f2f;
   --input-color-focus: #2962ff;
   --input-color-label: #333333;
+  --font-size: : 0.875rem;
 }
 
 body {
-  font-size: 0.875rem;
+  font-size: var(--font-size);
 }

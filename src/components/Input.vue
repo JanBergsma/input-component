@@ -13,6 +13,7 @@
         :rows="rows"
         :value="value"
       ></textarea>
+
       <input
         v-else
         id="x"
@@ -61,9 +62,7 @@ const focusColor = computed(
   () => `var(${props.error ? '--input-color-error' : '--input-color-focus'})`
 )
 const inputPaddingLeftRight = computed(() => (!props.startIcon ? '0.6rem' : '0'))
-const inputSize = computed(() =>
-  props.inputsize === 'md' ? `${props.rows * 56}px` : `${props.rows * 40}px`
-)
+const inputSize = computed(() => (props.inputsize === 'md' ? `56px` : `40px`))
 const fullWidth = computed(() => (props.fullwidth ? '100%' : '200px'))
 </script>
 
@@ -81,12 +80,9 @@ const fullWidth = computed(() => (props.fullwidth ? '100%' : '200px'))
 .input-container {
   outline: 1px solid v-bind(color);
   border-radius: 8px;
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
   align-items: center;
-  justify-content: space-between;
   width: v-bind(fullWidth);
-  height: v-bind(inputSize);
   overflow: hidden;
 }
 
@@ -102,14 +98,16 @@ i {
 
 .input-field {
   color: var(--input-color);
-  width: 80%;
+  height: v-bind(inputSize);
+  width: 100%;
   border: none;
   padding: 0 v-bind(inputPaddingLeftRight);
 }
 
 textarea.input-field {
-  height: 90%;
+  padding: 1rem;
   resize: none;
+  height: fit-content;
 }
 
 .input-field:focus {
