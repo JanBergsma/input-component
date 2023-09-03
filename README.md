@@ -18,7 +18,7 @@ Icon: https://google.github.io/material-design-icons/
 
 # Demo link
 
-https://64dc8c378d1c331facc35f31-qoapnjakzy.chromatic.com/?path=/docs/button--docs
+https://64e9b0c2b738ef8d0a31a911-rowzeckalx.chromatic.com/?path=/docs/input--docs
 
 # input-component
 
